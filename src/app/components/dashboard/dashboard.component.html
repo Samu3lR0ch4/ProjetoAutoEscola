@@ -1,0 +1,114 @@
+<header class="header">
+  <div class="logo">
+    <img src="logoA.png" alt="Logo AutoEscola">
+    <h1>AutoEscola Itacaré</h1>
+  </div>
+  <div class="user-info">
+    <span>Olá, {{ aluno?.nome }}</span>
+    <i class="fas fa-user-circle" (click)="toggleMenuUsuario()"></i>
+  </div>
+</header>
+
+<div class="user-menu" *ngIf="mostrarMenuUsuario">
+  <p><strong>Nome:</strong> {{ aluno?.nome }}</p>
+  <p><strong>CPF:</strong> {{ aluno?.cpf }}</p>
+  <p><strong>Data de Nascimento:</strong> {{ aluno?.dataNascimento }}</p>
+  <p><strong>Categoria:</strong> {{ aluno?.categoria }}</p>
+  <p><strong>Telefone:</strong> {{ aluno?.telefone }}</p>
+  <p><strong>Sexo:</strong> {{ aluno?.sexo }}</p>
+  <p><strong>Carteira:</strong> {{ aluno?.tipoCarteira }}</p>
+  <button (click)="logout()">Logout</button>
+</div>
+
+<main class="conteudo">
+  <section class="progresso">
+    <label>Progresso:</label>
+    <div class="barra">
+      <div class="preenchido" [style.width.%]="progresso">{{ progresso }}%</div>
+    </div>
+  </section>
+
+  <section class="aulas">
+    <h2>Aulas Teóricas</h2>
+    <div class="cards">
+      <div
+        class="card"
+        *ngFor="let aula of aulasTeoricas"
+        [class.assistida]="aula.assistida"
+      >
+        <h3>Dia {{ aula.dia }}</h3>
+        <p><strong>Local:</strong> {{ aula.local }}</p>
+        <p><strong>Horário:</strong> {{ aula.horario }}</p>
+        <p>
+          <strong>Modo:</strong>
+          <span *ngIf="aula.modo === 'online'">
+            <a [href]="aula.link" target="_blank">Aula Online</a>
+          </span>
+          <span *ngIf="aula.modo === 'presencial'">Presencial</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="aulas">
+    <h2>Aulas Práticas</h2>
+    <div class="cards">
+      <div
+        class="card"
+        *ngFor="let aula of aulasPraticas"
+        [class.assistida]="aula.assistida"
+      >
+        <h3>Dia {{ aula.dia }}</h3>
+        <p><strong>Local:</strong> {{ aula.local }}</p>
+        <p><strong>Horário:</strong> {{ aula.horario }}</p>
+        <p><strong>Modo:</strong> Presencial</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="provas" *ngIf="podeMarcarProva()">
+    <h2>Marcar Provas</h2>
+    <button (click)="toggleCalendarioTeorico()">Marcar Prova Teórica</button>
+    <button (click)="toggleCalendarioPratico()">Marcar Prova Prática</button>
+
+    <!-- Calendário -->
+    <div class="calendario" *ngIf="mostrarCalendarioTeorico">
+      <h4>Selecionar data para Prova Teórica</h4>
+      <div class="dias">
+        <div
+          class="dia"
+          *ngFor="let dia of diasDoMes(7, 2025)"
+          [class.selecionavel]="podeSelecionar(dia, 7, 2025)"
+          (click)="podeSelecionar(dia,7,2025) && selecionarData('teorica', dia, 7, 2025)"
+        >
+          {{ dia }} ({{ diaSemana(dia, 7, 2025) }})
+        </div>
+      </div>
+    </div>
+
+    <div class="calendario" *ngIf="mostrarCalendarioPratico">
+      <h4>Selecionar data para Prova Prática</h4>
+      <div class="dias">
+        <div
+          class="dia"
+          *ngFor="let dia of diasDoMes(7, 2025)"
+          [class.selecionavel]="podeSelecionar(dia, 7, 2025)"
+          (click)="podeSelecionar(dia,7,2025) && selecionarData('pratica', dia, 7, 2025)"
+        >
+          {{ dia }} ({{ diaSemana(dia, 7, 2025) }})
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div>
+    <a href="#">Termos e Condições</a> | <a href="#">Política de Privacidade</a>
+  </div>
+  <p>
+    © CFC Centro de Formação de Condutores Itacaré - 2025<br />
+    Este site utiliza seus dados pessoais em conformidade com a Lei Geral de
+    Proteção de Dados (LGPD).
+  </p>
+</footer>

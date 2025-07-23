@@ -1,0 +1,91 @@
+/* dashboardadm.component.css */
+.dashboard-container {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #e60000;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.user-menu {
+  background-color: #333;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #cc0000;
+}
+
+.student-form {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+.student-form input, .student-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.student-list {
+  margin-top: 20px;
+}
+
+.student-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-list th, .student-list td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.student-list th {
+  background-color: #e60000;
+  color: #fff;
+}
+
+.student-list td button {
+  margin-right: 5px;
+}
+
+.student-list td button:hover {
+  background-color: #cc0000;
+}

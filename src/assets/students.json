@@ -1,0 +1,32 @@
+[
+  {
+    "name": "João Silva",
+    "dob": "2000-01-01",
+    "gender": "M",
+    "licenseType": "primeira_habilitacao",
+    "phone": "(11) 99999-9999",
+    "category": "A",
+    "cpf": "123.456.789-00",
+    "classType": "presencial",
+    "onlineLink": "",
+    "aulas": [
+      {
+        "date": "2025-08-01",
+        "time": "09:00",
+        "location": "Autoescola Itacaré"
+      }
+    ]
+  },
+  {
+    "name": "Maria Oliveira",
+    "dob": "1995-05-15",
+    "gender": "F",
+    "licenseType": "reciclagem",
+    "phone": "(11) 98888-8888",
+    "category": "B",
+    "cpf": "987.654.321-00",
+    "classType": "online",
+    "onlineLink": "https://link-da-aula.com",
+    "aulas": []
+  }
+]

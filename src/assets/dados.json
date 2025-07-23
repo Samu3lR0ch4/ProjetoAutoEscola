@@ -1,0 +1,14 @@
+[
+  {
+    "nome": "admin123",
+    "senha": "123456",
+    "tipo": "admin"
+  },
+  {
+    "nome": "user@email.com",
+    "senha": "123456",
+    "tipo": "usuario"
+  }
+
+]
+

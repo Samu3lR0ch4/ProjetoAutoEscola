@@ -1,0 +1,36 @@
+/* Carro (lado esquerdo) */
+.d-flex {
+  background-color: #FFD700; /* Cor de fundo amarela */
+}
+
+/* Formulário (lado direito) */
+.bg-light {
+  background-color: #D80000; /* Cor de fundo vermelha */
+  color: white;
+}
+
+/* Botão Entrar */
+.btn-light {
+  background-color: #ffffff;
+  color: #D80000;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn-light:disabled {
+  background-color: #B0B0B0;
+  color: black;
+}
+
+/* Links (Esqueci minha senha, Retornar) */
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}

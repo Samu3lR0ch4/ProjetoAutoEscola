@@ -1,0 +1,118 @@
+
+<app-menulogin/>
+
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+    }
+
+    .hero-section {
+      background-color: #d6c38a;
+      padding: 60px 20px;
+      color: #000;
+    }
+
+    .hero-section h1 {
+      font-weight: 800;
+    }
+
+    .form-section {
+      padding: 60px 20px;
+    }
+
+    .form-control,
+    .form-select {
+      border-radius: 0;
+    }
+
+    .form-button {
+      background-color: #dc3545;
+      color: white;
+      font-weight: 600;
+    }
+
+    .form-button:hover {
+      background-color: #a71d2a;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      z-index: 1000;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+<body>
+
+ 
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1>Matricule-se</h1>
+      <p class="lead">Conheça nossas condições especiais de pagamento</p>
+      <p>Entre em contato via WhatsApp ou preencha o formulário que entraremos em contato com você.</p>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 text-center text-md-start">
+          <h4 class="mb-3">Informações e Matrículas</h4>
+          <p>Você pode tirar dúvidas diretamente com um de nossos consultores:</p>
+          <a href="https://wa.me/5573999385442" target="_blank" class="btn btn-dark btn-lg mt-2">
+            <i class="bi bi-whatsapp me-2"></i>Fale pelo WhatsApp
+          </a>
+          <img src="cnhmat.png" class="img-fluid mt-4" alt="Pessoa com CNH" style="max-width: 300px;">
+        </div>
+
+        <div class="col-md-6">
+          <h4 class="mb-3">Ou preencha o formulário:</h4>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Nome completo" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Telefone" required>
+            </div>
+            <div class="mb-3">
+              <select class="form-select" required>
+                <option selected disabled>Selecione um Serviço</option>
+                <option value="1ª Habilitação">1ª Habilitação</option>
+                <option value="Aulas Adicionais">Aulas Adicionais</option>
+                <option value="Reciclagem">Reciclagem</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Observações..."></textarea>
+            </div>
+            <button type="submit" class="btn form-button w-100">Enviar Formulário</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+</body>
+
+<app-rodape/>

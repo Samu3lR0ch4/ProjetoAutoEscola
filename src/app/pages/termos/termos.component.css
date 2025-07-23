@@ -1,0 +1,77 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+header p {
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Seções de termos */
+.terms h2 {
+    font-size: 1.6em;
+    margin-top: 20px;
+    color: #4CAF50;
+}
+
+.terms h3 {
+    font-size: 1.3em;
+    margin-top: 10px;
+    color: #4CAF50;
+}
+
+.terms p {
+    line-height: 1.6;
+}
+
+.terms ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.terms ul li {
+    margin-bottom: 8px;
+}
+
+/* Endereço de contato */
+address {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+address a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}

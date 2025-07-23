@@ -1,0 +1,49 @@
+<!-- dashboardadm.component.html -->
+<div class="dashboard-container">
+  <header>
+    <h1>Dashboard CFC Itacaré</h1>
+    <div class="user-info">
+      <span>Olá administrador</span>
+      <i class="user-icon" (click)="openUserMenu()">👤</i>
+      <div *ngIf="showUserMenu" class="user-menu">
+        <button (click)="openStudentForm()">Adicionar Novo Aluno</button>
+        <button (click)="logout()">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <h2>Cadastro de Alunos</h2>
+
+    <div *ngIf="showForm" class="student-form">
+      <form (ngSubmit)="submitForm()">
+        <!-- Formulário de Cadastro de Alunos (mesmo anterior) -->
+      </form>
+    </div>
+
+    <!-- Lista de Alunos -->
+    <div class="student-list">
+      <h3>Lista de Alunos</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students">
+            <td>{{ student.name }}</td>
+            <td>{{ student.category }}</td>
+            <td>
+              <button (click)="editStudent(student)">Editar</button>
+              <button (click)="removeStudent(student)">Remover</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<app-rodape/>

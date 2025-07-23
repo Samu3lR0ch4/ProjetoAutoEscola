@@ -1,0 +1,46 @@
+<div class="container-fluid vh-100 d-flex">
+  <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center bg-whit">
+    <img src="carroAulas.png" alt="Carro Ford" class="img-fluid" style="max-height: 80%;">
+  </div>
+
+  <div class="col-md-6 d-flex flex-column justify-content-center align-items-center bg-light p-5">
+    <img src="logo.png" alt="Logo Ford" class="mb-4" style="width: 120px;">
+
+    <h3 class="text-dark mb-4">Boas-vindas ao sistema interno!</h3>
+
+    <form [formGroup]="loginForm" (ngSubmit)="clickLogin()" class="w-100" style="max-width: 320px;">
+      <div class="mb-3">
+        <label class="form-label visually-hidden">Usuário</label>
+        <div class="input-group">
+          <input formControlName="nome" type="email" class="form-control border-dark rounded-3" placeholder="Insira seu e-mail">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label visually-hidden">Senha</label>
+        <div class="input-group">
+        <input formControlName="senha" type="password" class="form-control border-dark rounded-3" placeholder="Insira sua senha"> 
+        </div>
+      </div>
+
+      <div
+            class="form-check form-switch mb-3 d-flex justify-content-between align-items-center text-center bg-light"
+          >
+            <label class="form-check-label mb-0 text-dark" for="autoLogin"
+              >Logar automaticamente</label
+            >
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+            />
+          </div>
+      <button type="submit" class="btn btn-secondary w-100">Entrar</button>
+       <div class="mt-3 d-flex justify-content-between bg-light">
+        <a href="/politica" class="text-dark  border-dark rounded-3">Política de Privacidade</a>
+        <a href="" class="text-dark  border-dark rounded-3">Retornar ao site</a>
+      </div>
+    </form>
+  </div>
+  
+</div>

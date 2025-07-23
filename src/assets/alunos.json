@@ -1,0 +1,102 @@
+{
+  "aluno": {
+    "nome": "Samuel Rocha",
+    "cpf": "123.456.789-00",
+    "dataNascimento": "2006-09-06",
+    "categoria": "A/B",
+    "telefone": "(71) 98519-4054",
+    "sexo": "Masculino",
+    "tipoCarteira": "Primeira Habilitação"
+  },
+  "aulasTeoricas": [
+    {
+      "dia": 1,
+      "horario": "18:00 - 22:00",
+      "local": "Sala 101",
+      "modo": "presencial",
+      "assistida": true
+    },
+    {
+      "dia": 2,
+      "horario": "18:00 - 22:00",
+      "local": "Sala 101",
+      "modo": "online",
+      "link": "https://meet.google.com/teorica-02",
+      "assistida": true
+    },
+    {
+      "dia": 3,
+      "horario": "18:00 - 22:00",
+      "local": "Sala 102",
+      "modo": "presencial",
+      "assistida": true
+    },
+    {
+      "dia": 4,
+      "horario": "18:00 - 22:00",
+      "local": "Sala 102",
+      "modo": "online",
+      "link": "https://meet.google.com/teorica-04",
+      "assistida": true
+    },
+    {
+      "dia": 5,
+      "horario": "18:00 - 22:00",
+      "local": "Sala 103",
+      "modo": "presencial",
+      "assistida": true
+    },
+    {
+      "dia": 6,
+      "horario": "18:00 - 22:00",
+      "local": "Sala 103",
+      "modo": "presencial",
+      "assistida": true
+    },
+    {
+      "dia": 7,
+      "horario": "18:00 - 22:00",
+      "local": "Sala 104",
+      "modo": "online",
+      "link": "https://meet.google.com/teorica-07",
+      "assistida": true
+    },
+    {
+      "dia": 8,
+      "horario": "18:00 - 22:00",
+      "local": "Sala 104",
+      "modo": "presencial",
+      "assistida": true
+    },
+    {
+      "dia": 9,
+      "horario": "18:00 - 22:00",
+      "local": "Sala 105",
+      "modo": "presencial",
+      "assistida":true
+    }
+  ],
+  "aulasPraticas": [
+    {
+      "dia": 1,
+      "horario": "14:00 - 15:00",
+      "local": "Pátio A",
+      "modo": "presencial",
+      "assistida": false
+    },
+    {
+      "dia": 2,
+      "horario": "15:00 - 16:00",
+      "local": "Pátio B",
+      "modo": "presencial",
+      "assistida": false
+    },
+    {
+      "dia": 3,
+      "horario": "16:00 - 17:00",
+      "local": "Pátio A",
+      "modo": "presencial",
+      "assistida": false
+    }
+  ]
+}
