@@ -12,24 +12,28 @@ export class TermsupComponent implements OnInit {
   termsAccepted = false;
   showBanner = false;
 
-  ngOnInit(): void {
+ ngOnInit(): void {
+  if (typeof window !== 'undefined') {
     const accepted = localStorage.getItem('termsAccepted');
     const postponed = sessionStorage.getItem('termsPostponed');
 
-    // Só mostra se não aceitou e não adiou na sessão atual
     if (!accepted && !postponed) {
       this.showBanner = true;
     }
   }
+}
 
-  accept() {
+accept() {
+  if (typeof window !== 'undefined') {
     localStorage.setItem('termsAccepted', 'true');
-    this.showBanner = false;
   }
+  this.showBanner = false;
+}
 
-  postpone() {
-    // Esconde temporariamente para esta sessão
+postpone() {
+  if (typeof window !== 'undefined') {
     sessionStorage.setItem('termsPostponed', 'true');
-    this.showBanner = false;
   }
+  this.showBanner = false;
+}
 }
