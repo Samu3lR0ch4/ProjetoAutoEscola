@@ -1,0 +1,17 @@
+<div *ngIf="showBanner" class="privacy-bar">
+  <div class="privacy-text">
+    <strong>Política de Privacidade:</strong>
+    Para fins de esclarecimento, é responsabilidade exclusiva do CFC Itacaré confirmar que a sua Política de Privacidade esteja em conformidade com a Lei no 13.709/18 (“Geral de Proteção de Dados” ou “LGPD”)...
+  </div>
+
+  <div class="privacy-actions">
+    <label class="checkbox">
+      <input type="checkbox" [(ngModel)]="termsAccepted" />
+      Eu concordo com os termos e condições.
+    </label>
+    <div class="btn-group">
+      <button class="btn btn-secondary" (click)="postpone()">Depois</button>
+      <button class="btn btn-primary" [disabled]="!termsAccepted" (click)="accept()">Aceitar</button>
+    </div>
+  </div>
+</div>

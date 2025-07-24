@@ -18,6 +18,167 @@
   border-radius: 1rem;
 }
 
+.custom-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Indicadores */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #bbb;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-indicators button.active {
+  background-color: #000;
+}
+
+/* Botões de navegação */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+/* Hero styles */
+.hero-custom {
+  background-color: #ffd700;
+  padding: 80px 20px 60px;
+  position: relative;
+  min-height: 550px;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.categories {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  z-index: 2;
+  position: relative;
+}
+
+.red-bg-shape {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  width: 250px;
+  height: 250px;
+  background: red;
+  transform: rotate(45deg);
+  z-index: 1;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

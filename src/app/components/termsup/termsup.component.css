@@ -1,0 +1,44 @@
+.privacy-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #f8f9fa;
+  border-top: 3px solid #0d6efd;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 9999;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.privacy-text {
+  flex: 2;
+  font-size: 14px;
+  color: #333;
+}
+
+.privacy-actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  min-width: 250px;
+}
+
+.checkbox {
+  font-size: 14px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

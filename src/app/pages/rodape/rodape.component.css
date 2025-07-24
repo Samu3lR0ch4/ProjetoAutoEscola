@@ -447,7 +447,7 @@ nav {
     min-height: 120px;
 }
 
-/* Footer */
+
 footer {
     background: #333;
     color: white;
@@ -456,7 +456,6 @@ footer {
 }
 
 
-/* WhatsApp Button */
 .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -487,7 +486,7 @@ footer {
 
 
 .footer-custom {
-  background-color: #b30000; /* vermelho escuro */
+  background-color: #b30000; 
   color: white;
   padding: 40px 20px 10px;
   font-family: Arial, sans-serif;
@@ -542,7 +541,7 @@ footer {
 
 .footer-section a {
   text-decoration: none;
-  color: #ffcc00; /* amarelo claro */
+  color: #ffcc00; 
   transition: color 0.3s;
 }
 
@@ -559,7 +558,7 @@ footer {
 
 
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -593,7 +592,7 @@ footer {
     }
 }
 
-/* Animations */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -609,7 +608,7 @@ footer {
     animation: fadeInUp 0.8s ease-out;
 }
 
-/* Smooth scrolling */
+
 html {
     scroll-behavior: smooth;
 }

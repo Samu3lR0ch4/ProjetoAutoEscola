@@ -4,6 +4,8 @@ import { MenuloginComponent } from '../../pages/menulogin/menulogin.component';
 import { CarouselComponent, } from '../carrousel/carrousel.component';
 import { CardsComponent } from '../../pages/cards/cards.component';
 import { RodapeComponent } from '../../pages/rodape/rodape.component';
+import { TermosComponent } from '../../pages/termos/termos.component';
+import { TermsupComponent } from '../termsup/termsup.component';
 
 @Component({
   selector: 'app-home',

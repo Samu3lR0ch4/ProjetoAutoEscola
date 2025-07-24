@@ -1,10 +1,10 @@
-<!-- dashboardadm.component.html -->
 <div class="dashboard-container">
   <header>
+    <img src="logoA.png" alt="">
     <h1>Dashboard CFC Itacaré</h1>
     <div class="user-info">
-      <span>Olá administrador</span>
-      <i class="user-icon" (click)="openUserMenu()">👤</i>
+      <span>Olá, administrador</span>
+      <i class="user-icon" (click)="openUserMenu()"><i class="bi bi-person"></i></i>
       <div *ngIf="showUserMenu" class="user-menu">
         <button (click)="openStudentForm()">Adicionar Novo Aluno</button>
         <button (click)="logout()">Sair</button>
@@ -12,38 +12,108 @@
     </div>
   </header>
 
-  <div class="body-content">
-    <h2>Cadastro de Alunos</h2>
+ <main class="body-content">
+  <h2>Cadastro de Alunos</h2>
 
-    <div *ngIf="showForm" class="student-form">
-      <form (ngSubmit)="submitForm()">
-        <!-- Formulário de Cadastro de Alunos (mesmo anterior) -->
-      </form>
-    </div>
+  <div *ngIf="showForm" class="student-form">
+    <form (ngSubmit)="submitForm()">
+      <input type="text" placeholder="Nome" [(ngModel)]="student.name" name="name" required />
+      <input type="text" placeholder="CPF" [(ngModel)]="student.cpf" name="cpf" required />
+      <input type="date" placeholder="Data de Nascimento" [(ngModel)]="student.dob" name="dob" required />
+      <input type="tel" placeholder="Telefone" [(ngModel)]="student.phone" name="phone" required />
 
-    <!-- Lista de Alunos -->
-    <div class="student-list">
-      <h3>Lista de Alunos</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Categoria</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let student of students">
-            <td>{{ student.name }}</td>
-            <td>{{ student.category }}</td>
-            <td>
-              <button (click)="editStudent(student)">Editar</button>
-              <button (click)="removeStudent(student)">Remover</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <label>Sexo:</label>
+      <select [(ngModel)]="student.gender" name="gender" required>
+        <option value="" disabled selected>Selecione</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Outro">Outro</option>
+      </select>
+
+      <label>Categoria:</label>
+      <input type="text" placeholder="Categoria" [(ngModel)]="student.category" name="category" required />
+
+      <label>Tipo de Carteira:</label>
+      <select [(ngModel)]="student.licenseType" name="licenseType" required>
+        <option value="primeira habilitação">Primeira Habilitação</option>
+        <option value="reciclagem">Reciclagem</option>
+      </select>
+
+      <label>Tipo de Aula:</label>
+      <select [(ngModel)]="student.classType" name="classType" required>
+        <option value="online">Online</option>
+        <option value="presencial">Presencial</option>
+      </select>
+
+      <label *ngIf="student.classType === 'presencial'">Endereço da Aula Presencial:</label>
+      <input *ngIf="student.classType === 'presencial'" type="text" placeholder="Endereço" [(ngModel)]="student.localAddress" name="localAddress" />
+
+      <label *ngIf="student.classType === 'online'">Link da Aula Online:</label>
+      <input *ngIf="student.classType === 'online'" type="text" placeholder="https://..." [(ngModel)]="student.onlineLink" name="onlineLink" />
+
+      <label>Tipo de Aula</label>
+      <select [(ngModel)]="student.lessonType" name="lessonType" required>
+        <option value="teórica">Teórica</option>
+        <option value="prática">Prática</option>
+      </select>
+
+      <button type="submit">Salvar</button>
+    </form>
   </div>
-</div>
-<app-rodape/>
+
+  <div class="student-list">
+    <h3>Lista de Alunos</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Nascimento</th>
+          <th>Telefone</th>
+          <th>Sexo</th>
+          <th>Categoria</th>
+          <th>Carteira</th>
+          <th>Modelo de Aula</th>
+          <th>Endereço / Link</th>
+          <th>Tipo de Aula</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students; let i = index">
+          <td>{{ student.name }}</td>
+          <td>{{ student.cpf }}</td>
+          <td>{{ student.dob }}</td>
+          <td>{{ student.phone }}</td>
+          <td>{{ student.gender }}</td>
+          <td>{{ student.category }}</td>
+          <td>{{ student.licenseType }}</td>
+          <td>{{ student.classType }}</td>
+          <td>
+            <span *ngIf="student.classType === 'online'">{{ student.onlineLink }}</span>
+            <span *ngIf="student.classType === 'presencial'">{{ student.localAddress }}</span>
+          </td>
+          <td>{{ student.lessonType }}</td>
+          <td>
+            <button (click)="editStudent(i)">Editar</button>
+            <button (click)="generateLessons(i)">Gerar Aulas</button>
+            <button (click)="removeStudent(student)">Remover</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+
+
+<footer class="footer">
+  <div>
+    <a href="/termos">Termos e Condições</a> |
+    <a href="/politica">Política de Privacidade</a>
+  </div>
+  <p>
+    © CFC Centro de Formação de Condutores Itacaré - 2025<br />
+    Este site utiliza seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+  </p>
+</footer>
