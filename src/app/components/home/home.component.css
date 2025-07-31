@@ -44,7 +44,7 @@
   position: relative;
 }
 
-/* Indicadores */
+
 .carousel-indicators {
   display: flex;
   justify-content: center;
@@ -66,7 +66,6 @@
   background-color: #000;
 }
 
-/* Botões de navegação */
 .carousel-control {
   position: absolute;
   top: 50%;
@@ -88,7 +87,7 @@
   right: 10px;
 }
 
-/* Hero styles */
+
 .hero-custom {
   background-color: #ffd700;
   padding: 80px 20px 60px;
@@ -161,27 +160,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .card-hover:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -199,13 +177,13 @@
     text-decoration: none !important;
     transition: all 0.3s ease;
     display: inline-block;
-    padding: 8px 0; /* Aumenta área do hover */
+    padding: 8px 0; 
     margin-left: 20px;
 }
 
 .menu-item:hover {
-    transform: translateY(-2px); /* Efeito de levantar */
-    color: #ff6b6b !important; /* Vermelho mais claro no hover */
+    transform: translateY(-2px); 
+    color: #ff6b6b !important; 
 }
 
 
@@ -306,7 +284,7 @@
   z-index: 2;
 }
 
-/* Triângulo vermelho no fundo */
+
 .red-bg-shape {
   position: absolute;
   right: 40px;
@@ -319,29 +297,6 @@
   border-radius: 10px;
   opacity: 0.8;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -413,7 +368,7 @@ nav {
     color: #ffd700;
 }
 
-/* Hero Section */
+
 .hero {
     background-repeat: no-repeat;
     background-position: center right;
@@ -500,7 +455,7 @@ nav {
     margin-bottom: 1rem;
 }
 
-/* About Section */
+
 .about {
     padding: 80px 0;
     background: #f8f9fa;
@@ -535,7 +490,7 @@ nav {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Services Section */
+
 .services {
     padding: 80px 0;
     background: white;
@@ -622,7 +577,7 @@ nav {
     border-bottom: 2px solid #f0f0f0;
 }
 
-/* Footer */
+
 footer {
     background: #333;
     color: white;
@@ -640,7 +595,7 @@ footer {
     padding-right: 20px;
 }
 
-/* WhatsApp Button */
+
 .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -671,7 +626,7 @@ footer {
 
 
 .footer-custom {
-  background-color: #b30000; /* vermelho escuro */
+  background-color: #b30000; 
   color: white;
   padding: 40px 20px 10px;
   font-family: Arial, sans-serif;
@@ -688,7 +643,7 @@ footer {
 
 .footer-section h4,
 .footer-section h5 {
-  color: #FFD700; /* amarelo ouro */
+  color: #FFD700; 
   margin-bottom: 15px;
 }
 
@@ -710,7 +665,7 @@ footer {
 
 .footer-section a {
   text-decoration: none;
-  color: #ffcc00; /* amarelo claro */
+  color: #ffcc00; 
   transition: color 0.3s;
 }
 
@@ -727,10 +682,14 @@ footer {
 
 
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+    }
+
+    .caro {
+        width: 350px;
     }
 
     .hero h1 {
@@ -761,7 +720,7 @@ footer {
     }
 }
 
-/* Animations */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -777,7 +736,49 @@ footer {
     animation: fadeInUp 0.8s ease-out;
 }
 
-/* Smooth scrolling */
+
 html {
     scroll-behavior: smooth;
+}
+
+@media (max-width: 991px) {
+  .d-inline-flex.align-items-center.p-2.rounded.hover-bg-light {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .d-inline-flex.align-items-center.p-2.rounded.hover-bg-light i {
+    font-size: 1.1rem;
+  }
+
+  .d-inline-flex.align-items-center.p-2.rounded.hover-bg-light span {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .d-inline-flex.align-items-center.p-2.rounded.hover-bg-light {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .d-inline-flex.align-items-center.p-2.rounded.hover-bg-light i {
+    font-size: 1.2rem;
+    margin-right: 0.4rem;
+  }
+
+  .d-inline-flex.align-items-center.p-2.rounded.hover-bg-light span {
+    display: block;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .d-inline-flex.align-items-center.p-2.rounded.hover-bg-light span .fw-semibold.hover-underline {
+    display: inline-block;
+    margin-left: 0.3rem;
+  }
 }

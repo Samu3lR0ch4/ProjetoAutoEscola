@@ -1,111 +1,148 @@
 
-html, body {
-  height: 100%;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
-
 
 .dashboard-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  background: #f9f9f9;
 }
 
 
 header {
-  background-color: #e60000;
-  padding: 10px 20px;
-  color: #fff;
+  background: linear-gradient(90deg, #ffcc00, #e60000);
+  padding: 1rem 2rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  margin: 0;
-}
-
-
-.user-info {
-  display: flex;
-  align-items: center;
+  color: #fff;
   position: relative;
 }
 
-.user-icon {
-  margin-left: 10px;
-  cursor: pointer;
-  font-size: 20px;
+header img {
+  height: 50px;
 }
 
-.user-menu {
-  background-color: #333;
-  position: absolute;
-  top: 40px;
-  right: 0;
-  padding: 10px;
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.user-info {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+}
+
+
+.user-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
   z-index: 1000;
-  border-radius: 5px;
 }
 
 .user-menu button {
-  background-color: #444;
-  margin: 5px 0;
+  display: block;
+  padding: 0.7rem 1.5rem;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .user-menu button:hover {
-  background-color: #555;
-}
-
-
-button {
-  background-color: #e60000;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  margin: 5px 0;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #cc0000;
-}
-
-td button {
-  margin-right: 10px;
+  background: #f0f0f0;
 }
 
 
 .body-content {
   flex: 1;
-  padding: 20px;
+  padding: 2rem;
+}
+
+.body-content h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
 }
 
 
 .student-form {
-  background-color: #f4f4f4;
-  padding: 20px;
+  background: white;
+  padding: 2rem;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+.student-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
 }
 
 .student-form input,
 .student-form select {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 0.8rem;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  width: 100%;
 }
 
+.student-form label {
+  grid-column: span 2;
+  font-weight: bold;
+  margin-top: 1rem;
+}
 
+.student-form button[type="submit"] {
+  grid-column: span 2;
+  padding: 0.8rem;
+  background: #e60000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.student-form button[type="submit"]:hover {
+  background: #c70000;
+}
+
+/* Lista de alunos */
 .student-list {
-  margin-top: 30px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.student-list h3 {
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .student-list table {
@@ -115,32 +152,169 @@ td button {
 
 .student-list th,
 .student-list td {
-  border: 1px solid #ccc;
-  padding: 10px;
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
   text-align: left;
+  font-size: 0.95rem;
 }
 
 .student-list th {
-  background-color: #e60000;
-  color: #fff;
+  background: #ffcc00;
+  color: #000;
 }
 
-
-img {
-  height: 80px;
+.student-list tr:hover {
+  background: #f9f9f9;
 }
 
+.student-list button {
+  margin-right: 5px;
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
 
-.footer {
-  background: #212121;
+.student-list button:nth-child(1) {
+  background: #007bff;
   color: white;
+}
+
+.student-list button:nth-child(2) {
+  background: #17a2b8;
+  color: white;
+}
+
+.student-list button:nth-child(3) {
+  background: #dc3545;
+  color: white;
+}
+
+/* Rodapé */
+.footer {
+  background: #222;
+  color: #ccc;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  margin-top: auto;
+  padding: 1rem;
+  font-size: 0.85rem;
 }
 
 .footer a {
-  color: #ffab40;
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.footer a:hover {
   text-decoration: underline;
+}
+
+.footer p {
+  margin-top: 0.5rem;
+}
+
+
+
+@media (max-width: 1024px) {
+  .student-list table,
+  .student-list thead,
+  .student-list tbody,
+  .student-list th,
+  .student-list td,
+  .student-list tr {
+    display: block;
+  }
+
+  .student-list thead {
+    display: none;
+  }
+
+  .student-list tr {
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  }
+
+  .student-list td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .student-list td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #666;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+   .student-card {
+    padding: 12px;
+  }
+
+  .student-card .actions {
+    flex-direction: column;
+  }
+
+  .student-card .actions button {
+    width: 100%;
+  }
+
+    .footer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  .user-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .student-form,
+  .body-content {
+    padding: 15px;
+  }
+
+  .student-form input,
+  .student-form select {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .user-menu {
+    width: 100%;
+    right: auto;
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .student-list table {
+    font-size: 0.9rem;
+  }
+
+  .student-list th,
+  .student-list td {
+    padding: 8px;
+  }
 }

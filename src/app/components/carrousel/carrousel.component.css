@@ -16,6 +16,44 @@
   height: auto;
 }
 
+.carousel-item {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+.carousel-item.active {
+  display: block;
+  opacity: 1;
+}
+
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-indicators button {
+  width: 30px;           
+  height: 4px;          
+  background-color: black; 
+  border: none;
+  opacity: 0.6;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  border-radius: 2px;    
+}
+
+.carousel-indicators button.active {
+  background-color: #fff; 
+  opacity: 1;
+}
+
+
 .hero-wrapper {
   display: flex;
   align-items: center;
@@ -81,6 +119,19 @@
   z-index: 1;
   border-radius: 10px;
   opacity: 0.8;
+
+  animation: pulseShape 3s ease-in-out infinite;
+}
+
+@keyframes pulseShape {
+  0%, 100% {
+    opacity: 0.8;
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.05);
+  }
 }
 
 body {
@@ -206,7 +257,24 @@ nav {
     margin-bottom: 1rem;
 }
 
-
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+  .subtitle, .categories {
+    font-size: 0.9rem;
+  }
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+  .red-bg-shape {
+    width: 100px;
+    height: 100px;
+    right: 10px;
+    top: 10px;
+  }
+}
 
 
 

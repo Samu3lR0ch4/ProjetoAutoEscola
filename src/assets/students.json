@@ -2,7 +2,7 @@
   {
     "name": "João Silva",
     "dob": "2000-01-01",
-    "gender": "M",
+    "gender": "Homem",
     "licenseType": "primeira habilitação",
     "phone": "(11) 99999-9999",
     "category": "A",
@@ -20,7 +20,7 @@
   {
     "name": "Maria Oliveira",
     "dob": "1995-05-15",
-    "gender": "F",
+    "gender": "Mulher",
     "licenseType": "reciclagem",
     "phone": "(11) 98888-8888",
     "category": "B",

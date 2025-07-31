@@ -13,6 +13,9 @@
         }
 
 
+
+
+        
 header {
     background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
     color: white;
@@ -82,55 +85,81 @@ a.menu-item.text-danger{
     margin-left: 20px;
 }
 
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  position: absolute;
+  top: 60px; 
+  right: 15px;
+}
+
+.hamburger-btn span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+}
+
+
+
+.menu-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.menu-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-list li a:hover {
+  color: #ffd700;
+}
+
+
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
+  .hamburger-btn {
+    display: flex;
+  }
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    background-color: #8b0000;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    padding: 1rem;
+    border-radius: 0 0 4px 4px;
+    z-index: 10;
+  }
 
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
+  .menu-list.open {
+    display: flex;
+  }
 
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+  .menu-list li {
+    margin-bottom: 1rem;
+  }
 
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+  .menu-list li a {
+    font-weight: 600;
+    color: white;
+  }
 
-    .car-showcase {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container {
-        padding: 0 1rem;
-    }
-}
-
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.8s ease-out;
-}
-
-html {
-    scroll-behavior: smooth;
+  .login-btn-mobile a {
+    color: #ffd700;
+    font-weight: bold;
+  }
 }

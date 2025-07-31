@@ -64,7 +64,7 @@ section.hero{
 }
 
 
-/* SOBRE */
+
 .sobre {
   background-color: #ffd700;
   padding: 60px 20px;
@@ -101,7 +101,7 @@ section.hero{
   color: #333;
 }
 
-/* CARDS DE INFORMAÇÕES */
+
 .info-cards {
   padding: 60px 20px;
   display: flex;

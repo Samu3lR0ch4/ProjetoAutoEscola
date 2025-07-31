@@ -52,3 +52,11 @@
 .text-dark{
   padding-top: 100px;
 }
+
+@media (max-width: 768px) {
+
+.cursos-section {
+  margin-top: 100px; 
+}
+
+}

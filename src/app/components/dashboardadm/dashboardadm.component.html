@@ -22,11 +22,15 @@
       <input type="date" placeholder="Data de Nascimento" [(ngModel)]="student.dob" name="dob" required />
       <input type="tel" placeholder="Telefone" [(ngModel)]="student.phone" name="phone" required />
 
-      <label>Sexo:</label>
+      <label>Gênero:</label>
       <select [(ngModel)]="student.gender" name="gender" required>
         <option value="" disabled selected>Selecione</option>
-        <option value="Masculino">Masculino</option>
-        <option value="Feminino">Feminino</option>
+        <option value="Mulher Cisgênero">Mulher Cisgênero</option>
+        <option value="Mulher Transgênero">Mulher Transgênero</option>
+        <option value="Homem Cisgênero">Homem Cisgênero</option>
+        <option value="Homem Transgênero">Homem Transgênero</option>
+        <option value="Não binario">Pessoa não binária</option>
+        <option value="Prefiro não dizer">Prefiro não dizer</option>
         <option value="Outro">Outro</option>
       </select>
 
@@ -70,7 +74,7 @@
           <th>CPF</th>
           <th>Nascimento</th>
           <th>Telefone</th>
-          <th>Sexo</th>
+          <th>Gênero</th>
           <th>Categoria</th>
           <th>Carteira</th>
           <th>Modelo de Aula</th>
